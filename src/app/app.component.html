@@ -1,7 +1,7 @@
 <h1>List</h1>
 <ul>
   <li *ngFor="let item of items | async">
-    <!-- {{ item | json }} -->
+    {{ item.text | json }}
     <input type="text" #updatetext [value]="item.text">
     <button (click)="updateItem(item.key, updatetext.value)">Update</button>
     <button (click)="deleteItem(item.key)">Delete</button>
